@@ -1,0 +1,233 @@
+######################## SITE ########################
+
+baseURL = "https://eptw.com.my/"
+title = "ePTW - Digital Permit to Work"
+theme = "bigspring-light-hugo"
+
+timeZone = "Asia/Kuala_Lumpur"
+
+pagination.pagerSize = 3
+summaryLength = 10
+
+disableLanguages = []
+
+hasCJKLanguage = false
+
+
+######################## MODULES ########################
+
+[module]
+
+[[module.mounts]]
+source = "assets"
+target = "assets"
+
+[[module.mounts]]
+source = "hugo_stats.json"
+target = "assets/watching/hugo_stats.json"
+
+
+######################## BUILD ########################
+
+[build]
+
+noJSConfigInAssets = false
+useResourceCacheWhen = "fallback"
+
+[build.buildStats]
+enable = true
+
+[[build.cachebusters]]
+source = "assets/.*\\.(js|ts|jsx|tsx)"
+target = "(js|scripts|javascript)"
+
+[[build.cachebusters]]
+source = "assets/.*\\.(css|sass|scss)$"
+target = "(css|styles|scss|sass)"
+
+[[build.cachebusters]]
+source = "(postcss|tailwind)\\.config\\.js"
+target = "(css|styles|scss|sass)"
+
+[[build.cachebusters]]
+source = "assets/.*\\.(.*)$"
+target = "$1"
+
+
+######################## OUTPUTS ########################
+
+[outputs]
+
+home = ["HTML", "RSS", "JSON", "WebAppManifest"]
+
+
+######################## IMAGING ########################
+
+[imaging]
+
+resampleFilter = "Lanczos"
+
+[imaging.jpeg]
+quality = 90
+
+[imaging.webp]
+quality = 90
+
+[imaging.avif]
+quality = 90
+
+
+######################## CACHES ########################
+
+[caches]
+
+[caches.images]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
+
+[caches.assets]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
+
+
+######################## MARKUP ########################
+
+[markup]
+
+[markup.goldmark.renderer]
+unsafe = true
+
+[markup.highlight]
+style = "monokai"
+
+[markup.tableOfContents]
+startLevel = 2
+endLevel = 5
+ordered = true
+
+
+######################## MEDIA TYPES ########################
+
+[mediaTypes]
+
+[mediaTypes."application/manifest+json"]
+suffixes = ["webmanifest"]
+
+
+######################## OUTPUT FORMATS ########################
+
+[outputFormats]
+
+[outputFormats.WebAppManifest]
+mediaType = "application/manifest+json"
+rel = "manifest"
+
+
+######################## PLUGINS ########################
+
+# CSS Plugins
+
+[[params.plugins.css]]
+link = "plugins/swiper/swiper-bundle.css"
+
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/brands.css"
+
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/solid.css"
+
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/regular.css"
+
+[[params.plugins.css]]
+link = "plugins/font-awesome/v6/icons.css"
+
+
+# JS Plugins
+
+[[params.plugins.js]]
+link = "plugins/swiper/swiper-bundle.js"
+
+[[params.plugins.js]]
+link = "plugins/webfont/webfont-loader-2.js"
+
+[[params.plugins.js]]
+link = "plugins/cookie.js"
+
+[[params.plugins.js]]
+link = "plugins/lazy-loader.js"
+
+[[params.plugins.js]]
+link = "js/tab.js"
+
+
+######################## SECURITY ########################
+
+[security.exec]
+
+allow = [
+  "^(dart-)?sass(\\.exe)?$",
+  "^go(\\.exe)?$",
+  "^git(\\.exe)?$",
+  "^node(\\.exe)?$",
+  "^postcss(\\.exe)?$",
+  "^tailwindcss(\\.exe)?$"
+]
+
+[security.node]
+
+[security.node.permissions]
+
+allowAddons = ["tailwindcss"]
+
+allowChildProcess = ["tailwindcss"]
+
+allowRead = ["."]
+
+allowWorker = ["tailwindcss"]
+
+allowWrite = []
+
+disable = false
+
+
+######################## SITE PARAMETERS ########################
+
+[params]
+
+description = "ePTW is a digital Permit to Work platform for managing permits, approvals, contractors, JHA/HIRARC and work activities."
+
+author = "Movique Services"
+
+favicon = ""
+manifest = ""
+
+logo = "images/eptw-logo.png"
+logo_width = 120
+logo_height = 48
+
+
+######################## HEADER ########################
+
+[params.header]
+
+navbar_fixed = true
+
+
+######################## CONTACT ########################
+
+[params.contact]
+
+enable = false
+
+
+######################## SOCIAL ########################
+
+[params.social]
+
+
+######################## SEARCH ########################
+
+[params.search]
+
+enable = false

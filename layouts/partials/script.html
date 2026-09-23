@@ -1,0 +1,9 @@
+{{ range site.Params.plugins.js }}
+  {{ if findRE "^http" .link }}
+    <script src="{{ .link | relURL }}" {{ .attributes | safeHTMLAttr }}></script>
+  {{ else }}
+    {{ with resources.Get .link }}
+      <script src="{{ .RelPermalink }}"></script>
+    {{ end }}
+  {{ end }}
+{{ end }}

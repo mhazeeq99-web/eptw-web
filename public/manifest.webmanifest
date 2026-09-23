@@ -1,0 +1,12 @@
+{
+  "name": "ePTW - Digital Permit to Work",
+  "short_name": "ePTW - Digital Permit to Work",
+  "lang": "en",
+  
+  
+
+  
+  
+  "display": "standalone",
+  "start_url": "/?utm_source=web_app_manifest"
+}

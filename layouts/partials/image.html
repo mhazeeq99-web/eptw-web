@@ -1,0 +1,7 @@
+{{ with .Src }}
+  <img
+    src="{{ . | relURL }}"
+    alt="{{ $.Alt }}"
+    class="{{ $.Class }}"
+  >
+{{ end }}

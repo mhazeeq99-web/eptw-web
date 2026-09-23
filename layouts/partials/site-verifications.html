@@ -1,0 +1,8 @@
+{{ with site.Params.site_verification }}
+{{ with .google }}
+<meta name="google-site-verification" content="{{ . }}" />
+{{ end }}
+{{ with .bing }}
+<meta name="msvalidate.01" content="{{ . }}" />
+{{ end }}
+{{ end }}

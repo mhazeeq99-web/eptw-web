@@ -1,0 +1,121 @@
+<header class="header">
+  <nav class="navbar container">
+
+    <!-- Logo -->
+    <div class="flex-1">
+      <a href="{{ .Site.Home.RelPermalink }}" class="navbar-brand">
+        {{ partial "logo.html" }}
+      </a>
+    </div>
+
+    <!-- Mobile menu toggle -->
+    <input id="nav-toggle" type="checkbox" class="hidden">
+
+    <label
+      id="show-button"
+      for="nav-toggle"
+      class="flex cursor-pointer items-center md:hidden">
+      <i class="fas fa-bars h-6 text-xl"></i>
+    </label>
+
+    <label
+      id="hide-button"
+      for="nav-toggle"
+      class="cursor-pointer items-center md:hidden">
+      <i class="fas fa-times h-6 text-xl"></i>
+    </label>
+
+    <!-- Navigation -->
+    <ul
+      id="nav-menu"
+      class="navbar-nav hidden w-full md:flex md:w-auto md:flex-none md:items-center md:justify-center md:space-x-5">
+
+      <!-- Features -->
+      <li class="nav-item whitespace-nowrap">
+        <a
+          href="{{ "/" | relURL }}#features"
+          class="nav-link block whitespace-nowrap">
+          Features
+        </a>
+      </li>
+
+      <!-- Product -->
+      <li class="nav-item whitespace-nowrap">
+        <a
+          href="{{ "/" | relURL }}#product"
+          class="nav-link block whitespace-nowrap">
+          Product
+        </a>
+      </li>
+
+      <!-- How It Works -->
+      <li class="nav-item whitespace-nowrap">
+        <a
+          href="{{ "/" | relURL }}#how-it-works"
+          class="nav-link block whitespace-nowrap">
+          How It Works
+        </a>
+      </li>
+
+      <!-- Pricing -->
+      <li class="nav-item whitespace-nowrap">
+        <a
+          href="{{ "/" | relURL }}#pricing"
+          class="nav-link block whitespace-nowrap">
+          Pricing
+        </a>
+      </li>
+
+      <!-- About -->
+      <li class="nav-item whitespace-nowrap">
+        <a
+          href="{{ "/about/" | relURL }}"
+          class="nav-link block whitespace-nowrap">
+          About
+        </a>
+      </li>
+
+      <!-- Contact -->
+      <li class="nav-item whitespace-nowrap">
+        <a
+          href="{{ "/contact/" | relURL }}"
+          class="nav-link block whitespace-nowrap">
+          Contact
+        </a>
+      </li>
+
+      <!-- Mobile CTA -->
+      <li class="mt-3 block md:hidden">
+        <a
+          class="btn btn-primary z-0 w-full py-3.5"
+          href="https://app.eptw.com.my"
+          title="Get Started">
+          Get Started
+        </a>
+      </li>
+
+    </ul>
+
+    <!-- Desktop actions -->
+    <div class="hidden flex-1 items-center justify-end gap-6 md:flex">
+
+      <!-- Login -->
+      <a
+        href="https://app.eptw.com.my"
+        class="nav-link whitespace-nowrap"
+        title="Login">
+        Login
+      </a>
+
+      <!-- Get Started -->
+      <a
+        href="https://app.eptw.com.my"
+        class="btn btn-primary z-0 py-3.5 whitespace-nowrap"
+        title="Get Started">
+        Get Started
+      </a>
+
+    </div>
+
+  </nav>
+</header>

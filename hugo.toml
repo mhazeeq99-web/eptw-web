@@ -1,6 +1,6 @@
 ######################## SITE ########################
 
-baseURL = "https://eptw.com.my/"
+baseURL = "https://www.eptw.com.my/"
 title = "ePTW - Digital Permit to Work"
 theme = "bigspring-light-hugo"
 
@@ -199,7 +199,7 @@ description = "ePTW is a digital Permit to Work platform for managing permits, a
 
 author = "Movique Services"
 
-favicon = ""
+favicon = "favicon-96x96.png"
 manifest = ""
 
 logo = "images/eptw-logo.png"
